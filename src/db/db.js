@@ -4,8 +4,9 @@ const modelComunication = require('./model/comunication'); // Modelo de comunica
 const modelSubscripion = require('./model/subscription'); // Modelo de comunicacion
 
 
+const dburl = entorno ? 'postgresql://postgres:PdmmIKhoWvQuRgjqsAsLIQzNLYOOEqzs@postgres.railway.internal:5432/railway' : 'postgres:postgres:123@localhost:5432/noah'
 
-const sequelize = new Sequelize('postgres:postgres:123@localhost:5432/noah', {
+const sequelize = new Sequelize(dburl, {
     logging: false,
     native: false,
 });
